@@ -5,6 +5,7 @@ const {
 createApp({
     data(){
         return{
+            newTask: '',
             todolist: 
             [
                 {

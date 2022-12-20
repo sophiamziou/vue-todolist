@@ -14,13 +14,14 @@
             <div class="row">
                 <div class="col">
                     <ul class="unstyled-list">
-                        <li v-for="(lista, index) in todolist" v-bind:class="(lista.done === true) ? 'sbarrato' : ''">
+                        <li v-for="(lista, index) in todolist" v-bind:class="(lista.done === true) ? 'sbarrato' : ''" @click="checkTask(index)">
                             {{index + 1}} - {{lista.text}}
                             <button class="btn btn-sm btn-success" @click="checkTask(index)">done</button>
+                            <button class="btn btn-sm btn-danger" @click="deleteTask(index)">cancel</button>
                         </li>
                     </ul>
-                    <input type="text" placeholder="inserisci nuova task" v-model="newTask">
-                    <button class=" btn btn-primary btn-sm" @click="addTask">aggiungi task</button>
+                    <input type="text" placeholder="inserisci nuova task" v-model="newTask" @keyup.enter="addTask">
+                    <button class=" btn btn-primary btn-sm" @click="addTask" >aggiungi task</button>
                 </div>
             </div>
         </div>

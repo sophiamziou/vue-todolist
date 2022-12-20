@@ -53,6 +53,10 @@ createApp({
             else{
                 task.done = true;
             }
+        },
+        deleteTask(index)
+        {
+            this.todolist.splice(index, 1)
         }
     },
 }).mount('#app')

@@ -9,7 +9,7 @@ createApp({
             todolist: 
             [
                 {
-                    text: "fare la spesa",
+                    text: "seguire la lezione",
                     done: false,
                 },
                 {
@@ -26,11 +26,11 @@ createApp({
                 },
                 {
                     text: "giocare a ludo king",
-                    done: false,
+                    done: true,
                 },
                 {
                     text: "rigiocare a ludo",
-                    done: false,
+                    done: true,
                 }
             ]
         }

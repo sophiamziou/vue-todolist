@@ -14,9 +14,8 @@
             <div class="row">
                 <div class="col">
                     <ul class="unstyled-list">
-                        <li v-for="(lista, index) in todolist" v-bind:class="(lista.done === true) ? 'sbarrato' : ''" @click="checkTask(index)">
-                            {{index + 1}} - {{lista.text}}
-                            <button class="btn btn-sm btn-success" @click="checkTask(index)">done</button>
+                        <li v-for="(object, index) in todolist" v-bind:class="(object.done === true) ? 'sbarrato' : ''" @click="checkTask(index)">
+                            {{index + 1}} - {{object.text}}
                             <button class="btn btn-sm btn-danger" @click="deleteTask(index)">cancel</button>
                         </li>
                     </ul>
